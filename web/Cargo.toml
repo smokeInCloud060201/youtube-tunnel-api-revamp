@@ -1,0 +1,18 @@
+[package]
+name = "web"
+version = "0.1.0"
+edition = "2024"
+
+
+[dependencies]
+# Interal
+shared = {path = "../shared"}
+
+# External
+actix-web.workspace = true
+log.workspace = true
+tracing-subscriber.workspace = true
+tracing.workspace = true
+serde.workspace = true
+dotenvy = "0.15.7"
+listenfd = "1.0.2"
