@@ -30,6 +30,7 @@ pub async fn start() -> std::io::Result<()> {
     let mut server = HttpServer::new(move || {
         App::new()
             .wrap(middleware::Logger::default())
+            .wrap(GlobalErrorHandler)
             .configure(init_app_data)
             .configure(init_config)
     });
@@ -55,5 +56,9 @@ fn init_app_data(app_data: &mut web::ServiceConfig) {
     let video_search = Arc::new(VideoSearchService::new());
 
     app_data.app_data(web::Data::new(video_search.clone()));
+}
+
+fn init_middle_error_handle() {
+
 }
 
