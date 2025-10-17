@@ -1540,9 +1540,12 @@ dependencies = [
  "anyhow",
  "base64",
  "futures",
+ "log",
  "reqwest",
  "serde_json",
  "shared",
+ "tracing",
+ "tracing-subscriber",
 ]
 
 [[package]]
@@ -2085,6 +2088,7 @@ dependencies = [
  "listenfd",
  "log",
  "serde",
+ "service",
  "shared",
  "tracing",
  "tracing-subscriber",

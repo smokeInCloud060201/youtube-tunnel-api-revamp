@@ -40,7 +40,7 @@ impl VideoSearchResult {
 
 #[derive(Deserialize, Debug)]
 pub struct SearchVideoResponseResult {
-    pub kind: String,
+    // pub kind: String,
     pub etag: String,
     #[serde(rename = "nextPageToken")]
     pub next_page_token: String,
